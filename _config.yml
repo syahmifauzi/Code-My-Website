@@ -1,0 +1,35 @@
+# Site settings
+title: SYAHMI FAUZI .COM @ SF
+description: Just a personal website of mine.. also, a blog.. I love it.. I love it..
+markdown: kramdown
+exclude: ["node_modules", "gulpfile.js", "package.json", "README.md", "offline.txt"]
+# twitter_username: _syahmifauzi
+# github_username: syahmifauzi
+
+permalink: /:categories/:year/:month/:day/:title/ # just pretty
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.syahmifauzi.com" # the base hostname & protocol for your site
+production: true
+
+# For Development,
+# Comment 'url:' & 'production:' before
+# Running 'gulp' in console..
+
+# For Production,
+# Uncomment 'url:' & 'production:' before
+# Commit to master..
+
+collections:
+  project-arabic:
+    output: true
+    permalink: /projects/arabic/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      is_post: true
+      layout: "post"
+      category: "blog"

@@ -1,0 +1,45 @@
+mixin head-row(dekatJauhA, djE, djM, muzakkarA, muzE, muzM, muannathA, muaE, muaM)
+  tr
+    th.head-col(colspan="3")
+      span.arab= dekatJauhA
+      span.english= djE
+      span.malay= djM
+  tr
+    th.no-color
+    th
+      span.arab= muzakkarA
+      span.english= muzE
+      span.malay= muzM
+    th
+      span.arab= muannathA
+      span.english= muaE
+      span.malay= muaM
+
+mixin body-row(dhomirA, dhoE, dhoM, muzakkarA, muzE, muzM, muannathA, muaE, muaM)
+  tr
+    th
+      span.arab= dhomirA
+      span.english= dhoE
+      span.malay= dhoM
+    td
+      span.arab= muzakkarA
+      span.english= muzE
+      span.malay= muzM  
+    td
+      span.arab= muannathA
+      span.english= muaE
+      span.malay= muaM
+
+  
+#arabic-wrapper
+  table(lang="ar" dir="rtl")
+    +head-row('لِلْقَرِيبِ', 'Near', 'Dekat', 'اَلْمُذَكَّرُ', 'Male', 'Lelaki', 'اَلْمُؤَنَّثُ', 'Female', 'Perempuan') 
+    +body-row('اَلْمُفْرَدُ', 'One', 'Satu', 'هَذَا', 'This', 'Ini', 'هَذِهِ', 'This', 'Ini') 
+    +body-row('اَلْمُثَنَّى', 'Two', 'Dua', 'هَذَانِ', 'This', 'Ini', 'هَاتَانِ', 'This', 'Ini') 
+    +body-row('اَلْجَمْعُ', 'Many', 'Banyak/ Ramai', 'هَؤُلَاءِ', 'This', 'Ini', 'هَؤُلَاءِ', 'This', 'Ini')
+  table(lang="ar" dir="rtl")
+    +head-row('لِلْبَعِيْدِ', 'Far', 'Jauh', 'اَلْمُذَكَّرُ', 'Male', 'Lelaki', 'اَلْمُؤَنَّثُ', 'Female', 'Perempuan') 
+    +body-row('اَلْمُفْرَدُ', 'One', 'Satu', 'ذَلِكَ', 'That', 'Itu', 'تِلْكَ', 'That', 'Itu') 
+    +body-row('اَلْمُثَنَّى', 'Two', 'Dua', 'ذَانِكَ', 'That', 'Itu', 'تَانِكَ', 'That', 'Itu') 
+    +body-row('اَلْجَمْعُ', 'Many', 'Banyak/ Ramai', 'أُولَئِكَ', 'That', 'Itu', 'أُولَئِكَ', 'That', 'Itu')
+      

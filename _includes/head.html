@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Syahmi Fauzi">
+    <meta name="keywords" content="syahmifauzi, syahmi, syami, syhmi, fauzi, frontend, portfolio, msf, msfaf, msfworks">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{{"/assets/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Scripts -->
+    <script src="{{"/assets/js/jquery-1.12.0.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script type="text/javascript" src="{{"/assets/js/main.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+
+    {% include google-analytics.html %}

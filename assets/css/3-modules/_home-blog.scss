@@ -1,0 +1,19 @@
+/* BLOG */
+#homepage .section-wrap {
+  .blog {
+    font-family: $primary-font;
+    @include responsiveImages("/assets/img/blog-bg-s.jpg", "/assets/img/blog-bg-m.jpg", "/assets/img/blog-bg-l.jpg", "/assets/img/blog-bg-xl.jpg");
+    #col-wrap {
+      background-color: rgba(199, 199, 199, 0.4);
+      .col-40 {
+        a {@include home-CTA;}
+      }
+      .col-60 {
+        h1 {
+          @include home-h1-tag;
+          @include homepage-text-bg;
+        }
+      }
+    }
+  }
+}

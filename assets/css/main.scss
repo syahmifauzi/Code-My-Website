@@ -1,0 +1,24 @@
+@import "0-tools/normalize";
+/*! --------------->>>>>>>>>>>>>>>>>>>>>>>>> */
+/*! DESIGN BY SYAHMI FAUZI @ SYAHMIFAUZI.COM */
+/*! <<<<<<<<<<<<<<<<<<<<<<<<<--------------- */
+@import "0-tools/fonts";
+@import "0-tools/amiri-webfonts/amiri-fonts.css";
+
+@import "1-base/sf-base";
+
+@import "2-layouts/home-layout";
+
+@import "3-modules/loader";
+@import "3-modules/scrollbar";
+@import "3-modules/disqus-comments";
+@import "3-modules/home-mixins";
+@import "3-modules/home-header";
+@import "3-modules/home-about";
+@import "3-modules/home-portfolio";
+@import "3-modules/home-blog";
+@import "3-modules/home-contact";
+
+@import "4-blogpost/0-main-all";
+
+@import "5-projects/projects-main";

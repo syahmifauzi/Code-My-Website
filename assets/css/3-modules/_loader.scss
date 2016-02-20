@@ -1,0 +1,30 @@
+#loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  text-align: center;
+
+  span {
+    position: relative;
+    color: red;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: $primary-font;
+    top: 45%;
+    animation: changeColor 5s infinite;
+    @keyframes changeColor {
+      0% {color: red;}
+      16% {color: blue;}
+      32% {color: green;}
+      48% {color: yellow;}
+      64% {color: purple;}
+      80% {color: orange;}
+    }
+  }
+}

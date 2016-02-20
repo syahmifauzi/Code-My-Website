@@ -1,0 +1,110 @@
+- var dhomirBA  = ['هُوَ', 'هُمَا', 'هُمْ', 'هِيَ', 'هُمَا', 'هُنَّ', 'أَنْتَ', 'أَنْتُمَا', 'أنْتُمْ', 'أَنْتِ', 'أَنْتُمَا', 'أَنْتُنَّ', 'أَنَا', 'نَحْنُ']
+-     dhomirBI  = ['He', 'Both of Them(M)', 'They(M)', 'She', 'Both of Them(F)', 'They(F)', 'You(M)', 'Both of You(M)', 'All of You(M)', 'You(F)', 'Both of You(F)', 'All of You(F)', 'Me(M/F)', 'Us(M/F)']
+-     dhomirBM  = ['Dia(L)', 'Mereka Berdua(L)', 'Mereka Semua(L)', 'Dia(P)', 'Mereka Berdua(P)', 'Mereka Semua(P)', 'Kamu(L)', 'Kamu Berdua(L)', 'Kamu Semua(L)', 'Kamu(P)', 'Kamu Berdua(P)', 'Kamu Semua(P)', 'Saya(L/P)', 'Kami(L/P)']
+- var feelEnd   = ['َ', 'َا', 'ُوا', 'َتْ', 'َتَا', 'ْنَ', 'ْتَ', 'ْتُمَا', 'ْتُمْ', 'ْتِ', 'ْتُمَا', 'ْتُنَّ', 'ْتُ', 'ْنَا']
+//- -     bfFeelEnd = "&zwj;<span class='feelEndColor'>&zwj;" 
+//- -     afFeelEnd = "</span>"
+//- 
+//- - var acuanFeel = 'فَعَل'
+
+- var feel1  = 'ذَهَب'
+-     means1 = ['Went','Pergi']
+- var feel2  = 'جَلَس'
+-     means2 = ['Sat','Duduk']
+
+- var feel3  = 'سَاعَد'
+-     means3 = ['Helped','Menolong']
+- var feel4  = 'عَلَّم'
+-     means4 = ['Taught','Mengajar']
+
+- var feel5  = 'تَقَابَل'
+-     means5 = ['Met','Jumpa']
+- var feel6  = 'تَنَاوَل'
+-     means6 = ['Took','Mengambil']
+
+- var feel7  = 'اِسْتَخْرَج'
+-     means7 = ['Extracted','Mengeluarkan']
+- var feel8  = 'اِسْتَقْبَل'
+-     means8 = ['Celebrated','Menyambut']
+
+mixin head-row(bilaHurufM, bilaHurufE)
+  tr
+    th.head-col(colspan="3")
+      span.arab= bilaHurufM
+      span.english= bilaHurufE
+  tr
+    th(colspan="2")
+      span.arab الفِعْلُ الْمَاضِي
+      span.english Verb (Past Tense)
+      span.malay Kata Kerja Masa Lampau (telah)
+    th
+      span.arab الضَّمَائِر
+      span.english Pronoun
+      span.malay Kata Ganti Nama
+      
+mixin body-row(feel1A, feel1E, feel1M, feel2A, feel2E, feel2M, dhomirA, dhoE, dhoM)
+  tr
+    td
+      span.arab= feel1A
+      span.english= feel1E
+      span.malay= feel1M
+    td
+      span.arab= feel2A
+      span.english= feel2E
+      span.malay= feel2M
+    th
+      span.arab= dhomirA
+      span.english= dhoE
+      span.malay= dhoM
+
+//- mixin acuan-row(feel, dhomir)
+//-   tr
+//-     td
+//-       //- must have exclamation mark to unescape <span> code
+//-       span.arab!= feel
+//-     th
+//-       span.arab= dhomir
+
+
+#arabic-wrapper
+  //- table
+  //-   +head-row('Acuan Fe\'el', 'Verb Pattern')
+  //-   - for(var i=0; i<dhomirBA.length; i++) {
+  //-   -   var feelCombine1 = acuanFeel + bfFeelEnd + feelEnd[i] + afFeelEnd
+  //-       +acuan-row(feelCombine1, dhomirBA[i])
+  //-   - }
+  
+  table      
+    +head-row('3 Huruf', '3 Letters')
+    - for(var i=0; i<dhomirBA.length; i++) {
+    -   var feelCombine1 = feel1 + feelEnd[i]
+    -   var feelCombine2 = feel2 + feelEnd[i]
+        +body-row(feelCombine1, means1[0], means1[1], feelCombine2, means2[0], means2[1], dhomirBA[i], dhomirBI[i], dhomirBM[i])
+    - }
+    
+  table      
+    +head-row('4 Huruf', '4 Letters')
+    - for(var i=0; i<dhomirBA.length; i++) {
+    -   var feelCombine1 = feel3 + feelEnd[i]
+    -   var feelCombine2 = feel4 + feelEnd[i]
+        +body-row(feelCombine1, means3[0], means3[1], feelCombine2, means4[0], means4[1], dhomirBA[i], dhomirBI[i], dhomirBM[i])
+    - }
+  
+  br
+  
+  table      
+    +head-row('5 Huruf', '5 Letters')
+    - for(var i=0; i<dhomirBA.length; i++) {
+    -   var feelCombine1 = feel5 + feelEnd[i]
+    -   var feelCombine2 = feel6 + feelEnd[i]
+        +body-row(feelCombine1, means5[0], means5[1], feelCombine2, means6[0], means6[1], dhomirBA[i], dhomirBI[i], dhomirBM[i])
+    - }
+    
+  table      
+    +head-row('6 Huruf', '6 Letters')
+    - for(var i=0; i<dhomirBA.length; i++) {
+    -   var feelCombine1 = feel7 + feelEnd[i]
+    -   var feelCombine2 = feel8 + feelEnd[i]
+        +body-row(feelCombine1, means7[0], means7[1], feelCombine2, means8[0], means8[1], dhomirBA[i], dhomirBI[i], dhomirBM[i])
+    - }
+  

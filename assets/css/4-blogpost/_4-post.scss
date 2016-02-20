@@ -1,0 +1,18 @@
+// Post Style
+#post {
+  text-align: center;
+  color: #333;
+  font-family: $blog-font;
+  #section-wrap {
+    h2 {
+      padding: 10px 0;
+    }
+    p.meta {
+      padding: 5px 0;
+    }
+    .blog-content-wrapper {
+      // background-color: pink;
+      padding: 5px 0;
+    }
+  }
+}

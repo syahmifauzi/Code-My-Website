@@ -1,0 +1,40 @@
+/* ARABIC BUTTONS */
+#buttons button {
+  color: #fefefe;
+  margin: 10px 5px 0 5px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  @media screen and (max-width: 480px)
+    {font-size: 14px;}
+  transition: all 325ms ease-in-out;
+  background-color: lighten(red, 15%);
+  &:hover {
+    background-color: lighten(red, 25%);
+  }
+  &.active-btn {
+    color: #444;
+    background-color: lighten(green, 20%);
+    &:hover {
+      background-color: lighten(green, 23%);
+    }
+  }
+}
+
+#buttons.mobile-buttons {
+  transition: all 700ms ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.buttons-wrap {
+  width: 100%;
+  min-height: 40px;
+}

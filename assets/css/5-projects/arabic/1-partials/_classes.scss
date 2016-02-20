@@ -1,0 +1,25 @@
+.no-color {
+  opacity: 0;
+  border-color: transparent; // For IE
+}
+
+.feelEndColor {
+  color: lighten(red, 10%);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.arab {
+  font-family: $arabic-font;
+}
+
+.malay, .english {
+  font-family: $blog-font;
+  font-weight: lighter;
+}
+
+.not-bold {
+  font-weight: lighter;
+}

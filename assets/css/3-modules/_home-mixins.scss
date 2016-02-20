@@ -1,0 +1,113 @@
+@mixin hideText {
+  /* Hide the text */
+  text-indent: 201%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin defaultMarPad {
+  margin: 10px auto 0 auto;
+  padding: 0;
+}
+
+@mixin bg-img-contain($imgURL) {
+  background: {
+    image: url($imgURL);
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+}
+
+@mixin responsiveImages($imgS, $imgM, $imgL, $imgXL) {
+  background-image: url($imgS); // Width below 640px
+  @media all and (min-width: 640px) {background-image: url($imgM);}
+  @media all and (min-width: 900px) {background-image: url($imgL);}
+  @media all and (min-width: 1024px) {background-image: url($imgXL);}
+  background: {
+    size: cover;
+    position: center center;
+  }
+  height: 100%;
+  width: 100%;
+}
+
+@mixin defaultBoxShadow {
+  box-shadow: 2px 2px 10px #444;
+}
+@mixin homepage-text-bg {
+  background-color: rgba(199, 199, 199, 0.30);
+}
+
+@mixin homepage-responsive-size {
+  @media all and (max-width: 1024px)
+  {font-size: 34px;}
+  @media all and (max-width: 900px)
+  {font-size: 32px;}
+  @media all and (max-width: 640px)
+  {font-size: 30px;}
+  @media all and (max-width: 480px)
+  {font-size: 20px;}
+  @media all and (max-width: 320px)
+  {font-size: 15px;}
+}
+
+@mixin home-h1-tag {
+  color: rgba(30, 30, 30, 0.9);
+  text-shadow: 3px 2px 6px white;
+  padding: 30px 10px;
+  border-radius: 15px;
+  line-height: 1.6;
+  font: {
+    weight: bold;
+    size: 38px;
+  }
+  @include homepage-responsive-size;
+}
+
+@mixin home-CTA {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px #333 solid;
+  box-shadow: 3px 4px 9px #555;
+  background-color: darken(rgb(140, 206, 255), 10%);
+  color: rgb(23, 72, 199);
+  text-shadow: 1px 1px 5px white;
+  font-size: 1.8rem;
+  &:hover {
+    background-color: darken(rgb(140, 206, 255), 2%);
+    color: lighten(rgb(23, 72, 199), 5%);
+    box-shadow: 4px 5px 15px #555;
+    text-shadow: 1px 1px 5px #fcff60;
+  }
+  @include homepage-responsive-size;
+}
+
+@mixin animating-arrow {
+  &:before {
+    content: "<";
+    letter-spacing: -15px;
+  }
+  &:hover {color: #22a7f0;}
+  color: #2cf4dc;
+  letter-spacing: -15px;
+  display: block;
+  width: 50px;
+  height: 65px;
+  margin: 10px auto;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+  transition: all 135ms ease-in-out;
+  font-size: 50px;
+  font-family: monospace, garamond, times, serif;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  // background-color: pink;
+  animation: arrowMoves 1s infinite;
+  @keyframes arrowMoves {
+    0% {transform: rotateZ(-90deg) translateX(0px);}
+    50% {transform: rotateZ(-90deg) translateX(-30px);}
+  }
+}

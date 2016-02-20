@@ -1,0 +1,228 @@
+/* HEADER */
+#homepage .header-wrap {
+  // @include defaultBoxShadow;
+  header {
+    z-index: 10;
+    font-size: 16px; // ADJUST header font-size here
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+
+    h1.sf-logo {
+      @include bg-img-contain("/assets/img/sf-logo.svg");
+      width: auto;
+      height: 2.1em; // based on header font-size
+      @include hideText;
+      margin: 0 auto;
+      margin: 15px auto;
+      @media all and (max-width: 900px)
+        {height: 1.7em;@include defaultMarPad;}
+    }
+
+    .header-position {
+      min-height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media all and (max-width: 900px)
+        {flex-direction: row;}
+      @media all and (max-width: 640px)
+        {flex-direction: column;}
+
+      width: 90%;
+      background-color: rgba(236, 240, 241, 0.45);
+      @include defaultBoxShadow;
+      @include defaultMarPad;
+      border-radius: 10px;
+
+      // margin-bottom: 10px;
+      a {
+        color: rgba(0, 0, 0, 0.3);
+        transition: all 130ms ease-in-out;
+        &:hover, &:active
+          {color: rgba(0, 0, 0, 0.8);}
+        &.active-nav {
+          color: rgba(0, 0, 0, 0.5);
+          &:before
+            {content: "> ";}
+          &:after
+            {content: " <";}
+        }
+      }
+
+      h2.sf-img {
+        @include bg-img-contain("/assets/img/sf-img.jpg");
+        @include defaultBoxShadow;
+        @include defaultMarPad;
+        width: 8em;
+        height: 8em;
+        border-radius: 100%;
+        @include hideText;
+        @media all and (max-width: 900px) {
+          height: 150px;
+          width: 150px;
+          margin-bottom: 10px;
+        }
+        @media all and (max-height: 517px) and (max-width: 640px) {
+          min-height: 150px;
+          min-width: 150px;
+          margin-bottom: 0;
+        }
+      }
+
+      // Desktop Nav
+      .site-nav {
+        ul {
+          font-size: 1.5em; // based on header font-size
+          list-style: none;
+          font-weight: bold;
+          @include defaultMarPad;
+          li {
+            margin-bottom: 10px;
+            &:last-child
+              {margin-bottom: 0;}
+          }
+        }
+      }
+
+      .email-link {
+        font-size: 1.1em;
+        @include defaultMarPad;
+        margin-bottom: 10px;
+      }
+
+      .social-media {
+        @include defaultMarPad;
+        margin-bottom: 10px;
+        display: inline-block;
+        ul {
+          height: 30px;
+          li {
+            display: inline-block;
+            margin: 0 5px;
+            height: 100%;
+            width: 30px;
+          }
+          .github {
+            @include bg-img-contain("/assets/img/icon-github.svg");
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            &:hover
+              {transform: scale(1.2);}
+          }
+          .twitter {
+            @extend .github;
+            @include bg-img-contain("/assets/img/icon-twitter.svg");
+          }
+          .instagram {
+            @extend .github;
+            @include bg-img-contain("/assets/img/icon-instagram.svg");
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Mobile Nav
+#homepage .header-wrap {
+  .mobile-nav-toggle {
+    display: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 3;
+    margin: 0 17px -61px auto;
+    padding-top: 7px;
+    // background-color: tomato;
+    span,
+    span:before,
+    span:after {
+      top: 25px;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: relative;
+      background-color: #333;
+      transition: all 0.5s ease-in-out;
+    }
+    span:before
+      {top: -15px;}
+    span:after
+      {top: 13px;}
+    &.is-open span
+      {background-color: transparent;}
+    &.is-open span:before,
+    &.is-open span:after {
+      transform-origin: center;
+      transform: rotate(405deg);
+      top: 0;
+    }
+    &.is-open span:after
+      {transform: rotate(-405deg);}
+  }
+}
+
+// Media Queries
+#homepage .header-wrap {
+  @media all and (max-width: 900px) {
+    header {
+      @include defaultBoxShadow;
+      position: fixed; /* FIXed already */
+      font-size: 15px;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+      &.nav-up-hide
+        {transform: translateY(-100%);}
+      .sf-logo {
+        transform: translateX(-42%);
+        z-index: 2;
+        @media all and (max-width: 640px)
+          {transform: translateX(-39%);}
+        @media all and (max-width: 320px)
+          {transform: translateX(-35%);}
+      }
+      .mobile-nav-toggle
+        {display: block;}
+    }
+
+    .header-position {
+      position: static;
+      margin: 0 auto;
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0.2s;
+      height: 0;
+      overflow: hidden;
+      &.is-open {
+        margin: 10px auto;
+        height: 170px;
+        @media all and (max-width: 640px)
+          {height: 430px;}
+        @media all and (max-height: 517px) and (max-width: 640px) {
+          height: 65vh;
+          overflow-y: scroll;
+        }
+      }
+      // Desktop Nav
+      .site-nav {
+        // background-color: violet;
+        margin: 10px auto;
+      }
+      .oneGroup {
+        // background-color: pink;
+        display: inherit;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 30px auto;
+      }
+      @media all and (max-width: 640px) {
+        .site-nav {width: 100%; margin: 0 auto;}
+        .oneGroup {width: 100%; margin: 0 auto;}
+      }
+    }
+  }
+}

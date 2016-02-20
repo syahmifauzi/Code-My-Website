@@ -1,0 +1,78 @@
+/* ARABIC TABLES */
+#arabic-wrapper {
+table {
+  background-color: $table-bg-color;
+  font-size: $arab-font-size;
+  color: $arab-font-color;
+  display: inline-block;
+  border: 2px solid green;
+  border-collapse: separate;
+  border-spacing: 5px;
+  border-radius: 15px;
+  margin: 15px 10px;
+  line-height: 1.4;
+  @media screen and (max-width: 480px) {
+    border-spacing: 4px 3px;
+    margin: 15px 0 0 0;
+  }
+  th {
+    border: 2px solid lighten(red, 30%);
+    background-color: lighten(red, 45%);
+    color: lighten(#444, 10%);
+    border-radius: 15px;
+    padding: 5px 10px;
+    &.head-col {
+      border-color: darken(#4abef7, 1%);
+      background-color: lighten(#4abef7, 33%);
+      color: lighten(blue, 10%);
+    }
+  }
+  td {
+    color: lighten(#444, 10%);
+    border-radius: 15px;
+    padding: 5px 10px;
+    border: 2px solid lighten(blue, 30%);
+    cursor: pointer;
+    width: 125px;
+    background-color: rgba(0, 0, 0, 0.05);
+    &:hover
+    {border-color: lighten(blue, 15%);}
+    span
+      {display: none;}
+    &.show-me {
+      background-color: lighten(green, 57%);
+      span
+        {display: inline;}
+    }
+  }
+
+  // ARAB ENGLISH MALAY SPANS
+  span:before, span:after {
+    line-height: 1;
+  }
+  span {
+    line-height: 1.2;
+  }
+  span.malay:before {
+    content: "\a";
+    white-space: pre;
+  }
+  span.malay {
+    display: none !important;
+    font-family: $blog-font;
+    font-size: $bm-bi-font-size;
+    color: $bm-font-color;
+    @include bm-bi-responsive-font;
+    &.bm-toggle
+      {display: block !important;}
+  }
+  span.english {
+    @extend span.malay;
+    color: $bi-font-color;
+    &.bi-toggle
+      {display: block !important;}
+    &:after
+      {@extend span.arab:after;}
+  }
+}
+}

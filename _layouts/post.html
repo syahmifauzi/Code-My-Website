@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div id="post">
+  <div id="section-wrap">
+    <h2 id="blog-header">{% if page.arabic_title %}<span class="arab">{{ page.arabic_title }}</span> / {% endif %}{{ page.title }}</h2>
+    <p class="meta" id="blog-date">{{ page.date | date_to_string }}</p>
+    <div class="blog-content-wrapper">
+    <hr style="margin: 10px 20px;" id="blog-hr-top">
+      {{ content }}
+    <hr style="margin: 10px 20px;">
+    </div>
+  </div>
+</div>
+
+<div id="disqus-comments">
+{% include disqus-comments.html %}
+</div><br /><br /><br />
+{% include header/blogpost.html %}
+
+{% include loader.html %}

@@ -1,0 +1,146 @@
+//- 4 HURUF
+- var aMadiA4  = ['فَاعَلَ', 'أَفْعَلَ', 'فَعَّلَ']
+-     aMudhoA4 = ['يُفَاعِلُ', 'يُفْعِلُ', 'يُفَعِّلُ']
+
+- var cMadiA4  = ['رَاجَعَ', 'أَدْخَلَ', 'نَظَّفَ']
+-     cMadiE4  = ['Revised', 'Entered', 'Cleaned']
+-     cMadiM4  = ['Ulangkaji', 'Masuk', 'Bersihkan']
+-     cMudhoA4 = ['يُرَاجِعُ', 'يُدْخِلُ', 'يُنَظِّفُ']
+-     cMudhoE4 = ['Revise', 'Enter', 'Clean']
+-     cMudhoM4 = ['Ulangkaji', 'Masuk', 'Bersihkan']
+
+//- 5 HURUF         
+- var aMadiA5  = ['تَفَاعَلَ', 'اِفْتَعَلَ', 'تَفَعَّلَ']
+-     aMudhoA5 = ['يَتَفَاعَلُ', 'يَفْتَعِلُ', 'يَتَفَعَّلُ']
+
+- var cMadiA5  = ['تَنَاوَلَ', 'اِغْتَسَلَ', 'تَعَلَّمَ']
+-     cMadiE5  = ['Took', 'Bathed', 'Learned']
+-     cMadiM5  = ['Mengambil', 'Mandi', 'Belajar']
+-     cMudhoA5 = ['يَتَنَاوَلُ', 'يَغْتَسِلُ', 'يَتَعَلَّمُ']
+-     cMudhoE5 = ['Take', 'Bath', 'Learn']
+-     cMudhoM5 = ['Mengambil', 'Mandi', 'Belajar']
+
+//- 6 HURUF         
+- var aMadiA6  = 'اِسْتَفْعَلَ'
+-     aMudhoA6 = 'يَسْتَفْعِلُ'
+
+- var cMadiA6  = 'اِسْتَيْقَظَ'
+-     cMadiE6  = 'Woke Up'
+-     cMadiM6  = 'Bangun dari Tidur'
+-     cMudhoA6 = 'يَسْتَيْقِظُ'
+-     cMudhoE6 = 'Wake Up'
+-     cMudhoM6 = 'Bangun dari Tidur'
+
+
+mixin head-row(bilHurufM, bilHurufE)
+  tr
+    th.head-col(colspan="3")
+      span= bilHurufM
+      span.english= bilHurufE
+  tr
+    th
+      span.arab الفِعْلُ الْمُضَارِعُ
+      span.english Verb (Present Tense)
+      span.malay Kata Kerja Masa Kini (Sedang)
+    th
+      span.arab الفِعْلُ الْمَاضِي
+      span.english Verb (Past Tense)
+      span.malay Kata Kerja Masa Lalu (Telah)
+
+mixin acuan-in-row()
+  th(rowspan="3").right-header
+    span.not-bold Acuan Fi'il
+    span.english Verb Shape
+
+mixin contoh-in-row()
+  th(rowspan="3").right-header
+    span.not-bold Contoh Fi'il
+    span.english Verb Examples
+      
+mixin td-in-row(feelA, feelE, feelM)
+  td
+    span.arab= feelA
+    span.english= feelE
+    span.malay= feelM
+    
+mixin a-span-in-row(feelA)
+  td
+    span.arab= feelA
+
+ //- FIX THIS
+mixin empty-row()
+ tr
+
+
+#arabic-wrapper
+  table
+    +head-row('4 Huruf', '4 Letters')
+    tr
+      +a-span-in-row(aMudhoA4[0])
+      +a-span-in-row(aMadiA4[0])
+      +acuan-in-row()
+      
+    - for(i=1; i<3; i++) {
+      tr
+        +a-span-in-row(aMudhoA4[i])
+        +a-span-in-row(aMadiA4[i])
+    - }
+
+    +empty-row()
+        
+    tr
+      +td-in-row(cMudhoA4[0], cMudhoE4[0], cMudhoM4[0])
+      +td-in-row(cMadiA4[0], cMadiE4[0], cMadiM4[0])
+      +contoh-in-row()
+      
+    - for(i=1; i<3; i++) {
+      tr
+        +td-in-row(cMudhoA4[i], cMudhoE4[i], cMudhoM4[i])
+        +td-in-row(cMadiA4[i], cMadiE4[i], cMadiM4[i])
+    - }
+      
+      
+  table
+    +head-row('5 Huruf', '5 Letters')
+    tr
+      +a-span-in-row(aMudhoA5[0])
+      +a-span-in-row(aMadiA5[0])
+      +acuan-in-row()
+      
+    - for(i=1; i<3; i++) {
+      tr
+        +a-span-in-row(aMudhoA5[i])
+        +a-span-in-row(aMadiA5[i])
+    - }
+    
+    +empty-row()
+        
+    tr
+      +td-in-row(cMudhoA5[0], cMudhoE5[0], cMudhoM5[0])
+      +td-in-row(cMadiA5[0], cMadiE5[0], cMadiM5[0])
+      +contoh-in-row()
+      
+    - for(i=1; i<3; i++) {
+      tr
+        +td-in-row(cMudhoA5[i], cMudhoE5[i], cMudhoM5[i])
+        +td-in-row(cMadiA5[i], cMadiE5[i], cMadiM5[i])
+    - }
+      
+  br
+  table
+    +head-row('6 Huruf', '6 Letters')
+    tr
+      +a-span-in-row(aMudhoA6)
+      +a-span-in-row(aMadiA6)
+      th.right-header.thin
+        span.not-bold Acuan Fi'il
+        span.english Verb Shape
+    
+    +empty-row()
+      
+    tr
+      +td-in-row(cMudhoA6, cMudhoE6, cMudhoM6)
+      +td-in-row(cMadiA6, cMadiE6, cMadiM6)
+      th.right-header.thin
+        span.not-bold Contoh Fi'il
+        span.english Verb Example

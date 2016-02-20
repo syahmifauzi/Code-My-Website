@@ -1,0 +1,23 @@
+.text-post {
+  font-family: $blog-font;
+  max-width: 700px;
+  display: inline-block;
+  padding: 0 20px;
+  text-align: justify;
+  // text-indent: 35px;
+  p:before {
+    content: '\a';
+    white-space: pre;
+  }
+  &:after {
+    content: '\a';
+    white-space: pre;
+  }
+}
+
+.arabic-style {
+  font-family: "Amiri Quran ColoredWeb", "Amiri QuranWeb", "Times New Roman", serif;
+  font-size: 18px !important;
+  line-height: 1.8;
+  color: #333;
+}

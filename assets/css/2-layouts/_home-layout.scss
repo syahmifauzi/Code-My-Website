@@ -1,0 +1,92 @@
+/* SITE LAYOUT */
+#homepage {
+  .home-wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1750px;
+    min-height: 100%;
+    // background-color: lighten(violet, 5%);
+    .header-wrap {
+      width: 300px;
+      height: 100%;
+      float: left;
+      position: fixed;
+      box-shadow: 0 0 15px 5px #444;
+      // background-color: lighten(gray, 30%);
+    }
+    .section-wrap {
+      width: calc(100% - 300px);
+      height: 100%;
+      float: right;
+      box-shadow: 5px 0 10px #444;
+      // background-color: pink;
+    }
+  }
+
+  // Maximizing Header & Sections Width
+  @media all and (max-width: 900px) {
+    .home-wrap {
+      .header-wrap {
+        width: 100%;
+        height: auto;
+        min-height: 68px; // important to change if the mobile header height (is-close) change
+        position: static;
+      }
+      .section-wrap {
+        width: 100%;
+      }
+    }
+  }
+
+  // Setting 2 Inner Columns
+  #col-wrap {
+    padding: 20px 15px;
+    height: auto;
+    width: auto;
+    text-align: center;
+    font-size: 0;
+    vertical-align: middle;
+    .col-40 {
+      width: 40%;
+      display: inline-block;
+      font-size: initial;
+      /* IE 7 hack */
+      *zoom:1;
+      *display: inline;
+      vertical-align: middle;
+      // background-color: red;
+      @media all and (max-width: 1100px)
+        {width: 100%;}
+      @media all and (max-width: 900px)
+        {width: 40%;}
+      @media all and (max-width: 700px)
+        {width: 100%;}
+    }
+    .col-60 {
+      @extend .col-40;
+      width: 60%;
+      // background-color: violet;
+      @media all and (max-width: 1100px)
+        {width: 100%;}
+      @media all and (max-width: 900px)
+        {width: 60%;}
+      @media all and (max-width: 700px)
+        {width: 100%;}
+    }
+  }
+
+
+  // Display Flex & Rearrange 2 Inner Columns
+  @media all and (max-width: 1100px) {
+    #col-wrap {
+      display: flex;
+      flex-flow: column;
+      .col-40 {order: 2;}
+      .col-60 {order: 1;}
+      @media all and (max-width: 900px)
+        {display: block;}
+      @media all and (max-width: 700px)
+        {display: flex;}
+    }
+  }
+}

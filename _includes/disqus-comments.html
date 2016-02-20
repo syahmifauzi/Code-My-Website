@@ -1,0 +1,19 @@
+{% if site.production %}
+  {% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+    // var disqus_developer = 1; // ONLY UNCOMMENT DURING DEVELOPMENT MODE
+    var disqus_config = function () {
+        this.page.url = "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "syahmifauzi-{% if page.comments_id %}{{ page.comments_id }}{% else %}{{ page.url | replace:'index.html',''}}{% endif %}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//syahmifauzi.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  {% endif %}
+{% endif %}

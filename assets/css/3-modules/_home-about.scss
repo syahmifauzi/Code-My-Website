@@ -1,0 +1,33 @@
+/* ABOUT */
+#homepage .section-wrap {
+  .about {
+    @include responsiveImages("/assets/img/me-bg-s.jpg", "/assets/img/me-bg-m.jpg", "/assets/img/me-bg-l.jpg", "/assets/img/me-bg-xl.jpg");    
+    h1 {
+      margin: 0;
+      @include home-h1-tag;
+      padding-left: 25px;
+      a {
+        color: darken(#3498DB, 10%);
+        transition: color 150ms ease-in-out;
+        &:hover {
+          color: lighten(#3498DB, 5%);
+        }
+      }
+      span.indent-1 {
+        display: inline-block;
+        text-indent: 1em;
+      }
+      span.indent-2 {
+        @extend span.indent-1;
+        text-indent: 2em;
+      }
+      span.indent-3 {
+        @extend span.indent-1;
+      }
+      .indent-4 {
+        @extend span.indent-1;
+        text-indent: -0.2em;
+      }
+    }
+  }
+}

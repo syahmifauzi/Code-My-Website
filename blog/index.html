@@ -1,0 +1,28 @@
+---
+layout: default
+title: BLOG | SYAHMI FAUZI .COM @ SF
+---
+
+<div id="blog">
+
+  <div id="section-wrap">
+    <h1 class="ilmu">Kerana Ilmu Itu Milik Allah</h1>
+    <div class="quote-day"><q>If you want to walk fast walk alone, but if you want to walk far walk together..</q></div>
+
+    <div class="center-margin">
+      <h1 class="blog-heading">Post Index</h1>
+      <ul class="post-list arabic-style">
+        {% for post in site.posts %}
+          <li>{{ post.date | date_to_string }}<span class="arrow"> &raquo; </span>
+            <a href="{{ post.url }}">{% if post.arabic_title and post.title %}<span class="arab">{{ post.arabic_title }}</span>{% elsif post.title %}{{ post.title }}{% else %}{% endif %}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+  <div style="min-height: 126px; width: 100%;"></div>
+
+  {% include header/homepage.html %}
+
+</div>

@@ -1,0 +1,25 @@
+#arabic-wrapper {
+  text-align: center;
+  font-family: $blog-font;
+  padding: 10px;
+  @media screen and (max-width: 480px) {padding: 5px;}
+  .right-header {
+    width: 70px;
+    height: 145px;
+    font-size: 20px;
+    @media screen and (max-width: 375px)
+      {max-width: 65px}
+  }
+  .right-header.thin {
+    height: 40px;
+  }
+  table {
+    border-spacing: 5px;
+    th {
+      height: 40px;
+    }
+    td {
+      height: 30px;
+    }
+  }
+}

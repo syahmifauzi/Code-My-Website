@@ -1,0 +1,32 @@
+// Blog & Post Header
+#blog-post-header {
+  font-family: "Orbitron", cursive;
+  background-color: #555;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2px 0 0 0;
+  .header-wrap {
+    background-color: rgb(72, 189, 247);
+    text-align: center;
+    padding: 4px 10px 10px 10px;
+
+    &:hover
+      {background-color: darken(rgb(72, 189, 247), 10%);}
+
+    h3 {
+      a {
+        color: #fff;
+        text-shadow: 2px 3px 4px #006dff;
+        font-size: 20px;
+        &:hover
+          {text-shadow: 2px 3px 10px blue;}
+        span {
+          font-family: sans-serif, "Times New Roman", Times, serif;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/* PROJECTS */
+#homepage .section-wrap {
+  .projects {
+    @include responsiveImages("/assets/img/work-bg-m.jpg", "/assets/img/work-bg-l.jpg", "/assets/img/work-bg-l.jpg", "/assets/img/work-bg-xl.jpg");
+    .col-40 {
+      position: relative;
+      a.a-1st {@include home-CTA;}
+      span.arrow-below {@include animating-arrow;}
+    }
+    .col-60 {
+      h1 {
+        @include home-h1-tag;
+        @include homepage-text-bg;
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

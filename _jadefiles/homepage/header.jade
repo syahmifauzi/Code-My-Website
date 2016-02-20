@@ -1,0 +1,28 @@
+mixin nav-content()
+  ul
+    li: a(href="#about").all-site-nav.active-nav About
+    li: a(href="#projects").all-site-nav Projects
+    li: a(href="#blog").all-site-nav Blog
+    li: a(href="#contact").all-site-nav Contact
+
+header
+  .mobile-nav-toggle: span
+  h1.sf-logo SF
+  
+  .header-position
+    h2.sf-img Syahmi Fauzi
+        
+    nav.site-nav
+      +nav-content()
+    
+    .oneGroup  
+      .email-link
+        a(href="mainto:msf@syahmifauzi.com") +email me  
+      
+      .social-media
+        ul
+          li: a(href="https://github.com/syahmifauzi"): span.github
+          li: a(href="https://twitter.com/_syahmifauzi"): span.twitter
+          li: a(href="https://www.instagram.com/_syahmifauzi/"): span.instagram
+
+  

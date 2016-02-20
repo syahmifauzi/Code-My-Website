@@ -1,0 +1,111 @@
+// Blog Style
+#blog {
+  font-family: $blog-font;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  @media screen and (max-width: 480px)
+    {font-size: 17px;}
+  @media screen and (max-width: 370px)
+    {font-size: 15px;}
+
+  #section-wrap {
+    font-size: 1em;
+    color: #333;
+    .ilmu {
+      font-size: 1.6em;
+      padding: 15px 10px;
+    }
+    .quote-day {
+      color: lighten(blue, 20%);
+      padding: 5px 10px;
+      margin-bottom: 5px;
+      max-width: 600px;
+      display: inline-block;
+    }
+
+    .center-margin {
+      max-width: 300px; // POST INDEX WIDTH
+      margin: 0 auto;
+      @media screen and (max-width: 370px)
+        {max-width: 230px;}
+      .blog-heading {
+        font-size: 1.4em;
+        padding: 10px 0 5px 0;
+        text-decoration: underline;
+        text-align: center;
+      }
+    }
+    .post-list {
+      margin: 0 0 0 10px;
+      padding: 0 10px;
+      color: #555;
+      text-align: justify;
+      font-family: $blog-font;
+      li {
+        // background-color: pink;
+        margin: 0 0 25px 0;
+        font-size: 0.8em;
+        &:first-child {
+          margin-top: 15px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:nth-child(odd) {
+          // background-color: #ddd;
+        }
+        span.arrow {
+          font-weight: bold;
+          color: red;
+        }
+        span.arab {
+          font-family: $arabic-font;
+          font-size: 1.1em;
+        }
+        a {
+          color: blue;
+          &:hover {color: lighten(green, 10%);}
+          &:active {color: red;}
+          &:visited {
+            color: #222;
+            &:hover {color: orange;}
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Post Index Animation (Dashhhh)
+#blog #section-wrap {
+  h1.blog-heading {user-select: none;}
+  ul.post-list {
+    li {
+      user-select: none;
+      &:before {
+        content: "";
+        width: 15px;
+        height: 2px;
+        display: inline-block;
+        background-color: #008cff;
+        position: relative;
+        margin-left: -25px;
+        transform: translate(-10px, -3px);
+        transition: all 315ms ease-in-out;
+        border: 0px solid #008cff;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+      }
+      &:hover {
+        &:before {
+          width: 25px;
+          height: 5px;
+          transform: translate(-30px, -3px);
+        }
+      }
+    }
+  }
+}

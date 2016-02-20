@@ -1,0 +1,17 @@
+// --- ALL MIXINS NAME ---
+//   arab-responsive-font
+//   bm-bi-responsive-font
+
+// RESPONSIVE FONT SIZE
+@mixin arab-responsive-font {
+  @media screen and (max-width: 480px)
+    {font-size: 19px;}
+  @media screen and (max-width: 340px)
+    {font-size: 17px;}
+}
+@mixin bm-bi-responsive-font {
+  @media screen and (max-width: 480px)
+    {font-size: 13px;}
+  @media screen and (max-width: 340px)
+    {font-size: 10px;}
+}
