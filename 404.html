@@ -5,59 +5,19 @@ permalink: 404.html
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="author" content="Syahmi Fauzi">
-    <meta name="keywords" content="syahmifauzi, syahmi, syami, syhmi, fauzi, frontend, portfolio, msf, msfaf, msfworks">
-
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-    <style type="text/css">
-      body {
-        background-color: #efefef;
-        text-align: center;
-        height: 100%;
-        position: relative;
-      }
-      .wrapper {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-      h1 {
-        font-size: 55px;
-        margin: 25px 0 15px 0;
-      }
-      p {
-        margin: 0;
-        font-size: 30px;
-        color: #333;
-        text-align: center;
-        line-height: 1.6;
-      }
-      a {
-        text-decoration: none;
-        color: orange;
-      }
-      a:hover {
-        color: blue;
-      }
-    </style>
+    {% include head.html %}
   </head>
-  <body>
+  <body id="page404">
 
     <div class="wrapper">
-      <h1>404</h1>
-      <p>Hey!! You lost? <br /> Let's go back to <br/>
-        <a href="/">SyahmiFauzi.c&#x1f609;m</a><br />
-        or direct to his<br />
-        <a href="/blog">Blog &#9996;</a>
-      </p>
+      <div class="innerText">
+        <h1>{ Oops!! 404 }</h1>
+        <p>You lost buddy?<br />
+          This page doesn't exist.. <br />
+          It's okay, let's go back to <br/>
+          <a href="/">SyahmiFauzi.c&#x1f609;m</a><br />
+        </p>
+      </div>
     </div>
 
   </body>

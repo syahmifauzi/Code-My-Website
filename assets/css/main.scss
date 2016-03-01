@@ -5,6 +5,7 @@
 @import "0-tools/fonts";
 @import "0-tools/amiri-webfonts/amiri-fonts.css";
 
+@import "1-base/jekyll-style";
 @import "1-base/sf-base";
 
 @import "2-layouts/home-layout";
@@ -13,11 +14,13 @@
 @import "3-modules/scrollbar";
 @import "3-modules/disqus-comments";
 @import "3-modules/home-mixins";
+@import "3-modules/bottom-header";
 @import "3-modules/home-header";
 @import "3-modules/home-about";
 @import "3-modules/home-portfolio";
 @import "3-modules/home-blog";
 @import "3-modules/home-contact";
+@import "3-modules/page404";
 
 @import "4-blogpost/0-main-all";
 

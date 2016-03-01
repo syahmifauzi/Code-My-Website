@@ -1,0 +1,22 @@
+#project-page {
+  text-align: center;
+  color: #333;
+  font-family: $blog-font;
+  font-size: 20px;
+  @media screen and (max-width: 480px)
+    {font-size: 17px;}
+  @media screen and (max-width: 370px)
+    {font-size: 16px;}
+  #section-wrap {
+    h2#project-header {
+      padding: 10px;
+    }
+    #project-date {
+      padding: 5px 0;
+    }
+    #project-content-wrapper {
+      // background-color: pink;
+      padding: 5px 0;
+    }
+  }
+}

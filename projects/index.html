@@ -6,19 +6,14 @@ title: PROJECTS | SYAHMI FAUZI .COM @ SF
 <div id="project">
 
   <div id="section-wrap">
-    <h1 class="ilmu">This might look like a Blog</h1>
-    <div class="quote-day"><q> But believe me, this is not a blog.. <span>&#128514;</span> </q></div>
-
-    <div class="center-margin">
-      <h1 class="project-heading">Arabic Project</h1>
-      <ul class="project-list arabic-style">
-        {% for project in site.project-arabic %}
-          <li><a href="{{ project.url }}">{% if project.arabic_title and project.title %}<span class="arab">{{ project.arabic_title }}</span>{% elsif project.title %}{{ project.title }}{% else %}{% endif %}</a></li>
-        {% endfor %}
-      </ul>
+    <h1 class="project-heading">Arabic Project</h1>
+    <div class="all-projects">
+      {% for project in site.project-arabic %}
+        <a href="{{ project.url }}"><div>{% if project.arabic_title and project.title %}<span class="arab">{{ project.arabic_title }}</span>{% elsif project.title %}{{ project.title }}{% else %}{% endif %}</div></a>
+      {% endfor %}
     </div>
-
   </div>
+
   <div style="min-height: 126px; width: 100%;"></div>
 
   {% include header/homepage.html %}

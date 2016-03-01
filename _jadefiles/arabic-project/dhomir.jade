@@ -1,0 +1,50 @@
+mixin head-row(munfasilA, munfasilE, munfasilM, muttasilA, muttasilE, muttasilM)
+  tr
+    th.head-col(colspan="2")
+      span.arab الضَّمَائِر
+      //- span.english DhomirE
+      span.malay Kata Ganti Nama
+  tr
+    th
+      span.arab= munfasilA
+      span.english= munfasilE
+      span.malay= munfasilM
+    th
+      span.arab= muttasilA
+      span.english= muttasilE
+      span.malay= muttasilM
+      
+mixin body-row(munfasilA, munfasilE, munfasilM, muttasilA, muttasilE, muttasilM)
+  tr
+    td
+      span.arab= munfasilA
+      span.english= munfasilE
+      span.malay= munfasilM
+    td
+      span.arab= muttasilA
+      span.english= muttasilE
+      span.malay= muttasilM
+
+  
+#arabic-wrapper
+  table(lang="ar")#dhomir
+    +head-row('المُنْفَصِلُ', 'Separate', 'Berpisah', 'المُتَّصِلُ', 'Connect with word (Suffix)', 'Bersambung (Merujuk kepada kepunyaan)')
+    
+    +body-row('هُوَ', 'He', 'Dia(L)', 'هُ', 'His', 'Dia(L) Punya')
+    +body-row('هُمَا', 'Both of Them(M)', 'Mereka Berdua(L)', 'هُمَا', 'Their(M)', 'Mereka Berdua(L) Punya')
+    +body-row('هُمْ', 'They(M)', 'Mereka Semua(L)', 'هُمْ', 'Their(M)', 'Mereka Semua(L) Punya')
+    
+    +body-row('هِيَ', 'She', 'Dia(P)', 'هَا', 'Her', 'Dia(P) Punya')
+    +body-row('هُمَا', 'Both of Them(F)', 'Mereka Berdua(P)', 'هُمَا', 'Their(F)', 'Mereka Berdua(P) Punya')
+    +body-row('هُنَّ', 'They(F)', 'Mereka Semua(P)', 'هُنَّ', 'Their(F)', 'Mereka Semua(P) Punya')
+    
+    +body-row('أَنْتَ', 'You(M)', 'Kamu(L)', 'كَ', 'Your(M)', 'Kamu(L) Punya')
+    +body-row('أَنْتُمَا', 'Both of You(M)', 'Kamu Berdua(L)', 'كُمَا', 'Your(M)', 'Kamu Berdua(L) Punya')
+    +body-row('أنْتُمْ', 'All of You(M)', 'Kamu Semua(L)', 'كُمْ', 'Your(M)', 'Kamu Semua(L) Punya')
+    
+    +body-row('أَنْتِ', 'You(F)', 'Kamu(P)', 'كِ', 'Your(F)', 'Kamu(P) Punya')
+    +body-row('أَنْتُمَا', 'Both of You(F)', 'Kamu Berdua(P)', 'كُمَا', 'Your(F)', 'Kamu Berdua(P) Punya')
+    +body-row('أَنْتُنَّ', 'All of You(F)', 'Kamu Semua(P)', 'كُنَّ', 'Your(F)', 'Kamu Semua(P) Punya')
+    
+    +body-row('أَنَا', 'Me(M/F)', 'Saya(L/P)', 'يْ', 'My(M/F)', 'Saya(L/P) Punya')
+    +body-row('نَحْنُ', 'Us(M/F)', 'Kami(L/P)', 'نَا', 'Our(M/F)', 'Kami(L/P) Punya')

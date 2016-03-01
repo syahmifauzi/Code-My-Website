@@ -1,6 +1,6 @@
 # Site settings
 title: SYAHMI FAUZI .COM @ SF
-description: Just a personal website of mine.. also, a blog.. I love it.. I love it..
+description: Syahmi is a self-taught front-end web developer from Malaysia.. This is his personal website.. Also, a blog..
 markdown: kramdown
 exclude: ["node_modules", "gulpfile.js", "package.json", "README.md", "offline.txt"]
 # twitter_username: _syahmifauzi

@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://www.syahmifauzi.com/</loc>
-        <lastmod>2016-02-20T19:17:50.023Z</lastmod>
+        <lastmod>2016-03-01T19:21:16.752Z</lastmod>
     </url>
     <url>
         <loc>http://www.syahmifauzi.com/blog/</loc>
-        <lastmod>2016-02-20T19:17:49.974Z</lastmod>
+        <lastmod>2016-03-01T19:21:16.706Z</lastmod>
     </url>
     <url>
         <loc>http://www.syahmifauzi.com/projects/</loc>
-        <lastmod>2016-02-20T19:17:49.997Z</lastmod>
+        <lastmod>2016-03-01T19:21:16.732Z</lastmod>
+    </url>
+    <url>
+        <loc>http://www.syahmifauzi.com/projects/arabic/dhomir/</loc>
+        <lastmod>2016-03-01T19:21:18.084Z</lastmod>
     </url>
     <url>
         <loc>http://www.syahmifauzi.com/projects/arabic/fiil-madhi/</loc>
-        <lastmod>2016-02-20T19:17:51.492Z</lastmod>
+        <lastmod>2016-03-01T19:21:18.007Z</lastmod>
     </url>
     <url>
         <loc>http://www.syahmifauzi.com/projects/arabic/fiil-mudhori/</loc>
-        <lastmod>2016-02-20T19:17:51.525Z</lastmod>
+        <lastmod>2016-03-01T19:21:18.037Z</lastmod>
     </url>
     <url>
         <loc>http://www.syahmifauzi.com/projects/arabic/ism-isyarah/</loc>
-        <lastmod>2016-02-20T19:17:51.455Z</lastmod>
+        <lastmod>2016-03-01T19:21:17.976Z</lastmod>
+    </url>
+    <url>
+        <loc>http://www.syahmifauzi.com/blog/2015/12/28/starter-project-frontend-workflow/</loc>
+        <lastmod>2016-03-01T19:21:18.119Z</lastmod>
     </url>
     <url>
         <loc>http://www.syahmifauzi.com/blog/2016/01/03/hormat-orang/</loc>
-        <lastmod>2016-02-20T19:17:51.569Z</lastmod>
+        <lastmod>2016-03-01T19:21:18.176Z</lastmod>
     </url>
     <url>
         <loc>http://www.syahmifauzi.com/blog/2016/01/25/berubah/</loc>
-        <lastmod>2016-02-20T19:17:51.609Z</lastmod>
+        <lastmod>2016-03-01T19:21:18.215Z</lastmod>
     </url>
 </urlset>

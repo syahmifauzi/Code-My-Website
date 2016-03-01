@@ -1,0 +1,51 @@
+// Blog & Project Header
+a#bottom-header {
+  font-family: "Orbitron", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 2px 5px #aaa;
+  color: #111;
+  background-color: rgb(151, 37, 255);
+  position: fixed;
+  height: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 0 0 0;
+  &:hover {
+    background-color: red;
+    text-shadow: 1px 2px 10px #aaa;
+  }
+  .header-wrap {
+    background-color: #fefefe;
+    text-align: center;
+    padding: 5px 0;
+    height: 100%;
+    .back-text, .center, .sf-logo {
+      display: inline-block;
+      position: absolute;
+    }
+    .center {
+      font-family: $blog-font;
+      left: 50%;
+      transition: all 225ms ease-in-out;
+      @media all and (max-width: 400px)
+        {left: 60%;}
+      @media all and (max-width: 300px)
+        {left: 70%;}
+    }
+    .back-text {left: 15px;}
+    .sf-logo {
+      right: 15px;
+      @include hideText;
+      background: {
+        image: url("/assets/img/sf-logo.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: contain;
+      }
+      height: 30px;
+      width: 35px;
+    }
+  }
+}

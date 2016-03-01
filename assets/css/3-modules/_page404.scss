@@ -1,0 +1,52 @@
+body#page404 {
+  font-family: cursive;
+  text-align: center;
+  height: 100%;
+  background-image: url("/assets/img/404.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  .wrapper, .innerText {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .wrapper {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .innerText {
+    max-height: 370px;
+    max-width: 370px;
+    text-shadow: 3px 4px 5px #fff;
+    /*background-color: pink;*/
+  }
+  h1 {
+    font-size: 55px;
+    margin: 25px 0 15px 0;
+  }
+  h2 {
+    font-size: 40px;
+    margin: 25px 0 15px 0;
+  }
+  p {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+  a:hover {
+    color: orange;
+  }
+  @media all and (max-width: 400px) {
+    h1 {font-size: 40px;}
+    p {font-size: 25px;}
+  }
+}
