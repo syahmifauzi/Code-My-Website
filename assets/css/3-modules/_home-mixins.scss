@@ -41,7 +41,7 @@
 
 @mixin homepage-responsive-size {
   @media all and (max-width: 1024px)
-  {font-size: 34px;}
+  {font-size: 33px;}
   @media all and (max-width: 900px)
   {font-size: 32px;}
   @media all and (max-width: 640px)
@@ -60,7 +60,7 @@
   line-height: 1.6;
   font: {
     weight: bold;
-    size: 38px;
+    size: 34px;
   }
   @include homepage-responsive-size;
 }
