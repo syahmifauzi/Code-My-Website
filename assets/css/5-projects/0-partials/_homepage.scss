@@ -51,5 +51,24 @@
         }
       }
     }
+    .ictedu-wrap {
+      margin: auto;
+      max-width: 500px;
+      padding: 0 10px;
+      a.ictedu-logo {
+        background: {
+          image: url("/assets/img/portfolio/ictedu.png");
+          repeat: no-repeat;
+          position: center;
+          size: contain;
+        }
+        display: inline-block;
+        width: 150px;
+        height: 100px;
+      }
+      .ictedu-desc {
+        font-family: $blog-font;
+      }
+    }
   }
 }

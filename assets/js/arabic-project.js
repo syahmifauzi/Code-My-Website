@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   // Buttons Fixed Positon When Scroll Down
   $(window).scroll(function() {
-    var scroll = $(window).scrollTop(),
+    var scroll  = $(window).scrollTop(),
         heightA = $("#project-header").outerHeight(),
         heightB = $("#project-date").outerHeight(),
         heightC = $("#gnc").outerHeight(),
